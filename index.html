@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- tailwind and daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/13e759ec6f.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <title>Fruit Burst</title>
+
+    <!-- custom style -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                "primary-color": '#F85559',
+                'gradient-start': '#121212',
+                'gradient-end': '#12121200',
+              }
+            }
+          }
+        }
+    </script>
+
+    <style>
+        .font-lato{
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+</head>
+<body class="font-lato">
+    <!-- header section -->
+    <header class="bg-yellow-100">
+        <!-- nav section -->
+        <nav class="container mx-auto px-4 md:px-8 lg:px-24 py-4">
+            <div class="lg:bg-primary-color lg:px-8 py-3 rounded-full">
+                <div class="flex justify-between items-center flex-row-reverse lg:flex-row">
+                    <div class="dropdown dropdown-bottom dropdown-end lg:hidden">
+                        <label tabindex="0" class=" m-1"><i class="fa-solid fa-bars"></i></label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <div class="flex flex-col gap-3 pl-4 py-4">
+                                <li>Home</li>
+                                <li>About Us</li>
+                                <li>Shop</li>
+                                <li>All Fruits</li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="hidden lg:flex lg:text-white list-none gap-5 text-sm">
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Shop</li>
+                        <li>All Fruits</li>
+                    </div>
+                    <div class="flex lg:text-white items-center gap-2 text-xl font-bold">
+                        <img src="./images/logo.png" alt="logo" class="w-7">
+                        <h2>Fruit Burst</h2>
+                    </div>
+                    <div class="flex items-center hidden lg:block">
+                        <div class="relative w-72">
+                            <input type="text" id="search" class="text-zinc-800 text-xs rounded-full block w-full pl-5 p-2.5 outline-none placeholder:font-medium" placeholder="Search here">
+                            <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-5 text-zinc-500">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- banner section -->
+        <section class="container mx-auto px-4 md:px-8 lg:px-24">
+            <div class="carousel w-full min-h-[calc(100vh-320px)] md:min-h-[calc(100vh-200px)] lg:min-h-[calc(100vh-100px)]">
+                <div id="slide1" class="carousel-item relative w-full bg-[url('./images/banner1.png')] bg-center bg-cover rounded-xl">
+                  <div class="hero-overlay bg-opacity-5 bg-gradient-to-b from-gradient-start to-gradient-end rounded-xl"></div>
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle bg-[#121212] border-none text-white">❮</a> 
+                    <a href="#slide2" class="btn btn-circle bg-[#121212] border-none text-white">❯</a>
+                  </div>
+                </div> 
+                <div id="slide2" class="carousel-item relative w-full bg-[url('./images/banner2.png')] bg-center bg-cover rounded-xl">
+                  <div class="hero-overlay bg-opacity-5 bg-gradient-to-b from-gradient-start to-gradient-end rounded-xl"></div>
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle bg-[#121212] border-none text-white">❮</a> 
+                    <a href="#slide3" class="btn btn-circle bg-[#121212] border-none text-white">❯</a>
+                  </div>
+                </div> 
+                <div id="slide3" class="carousel-item relative w-full bg-[url('./images/banner3.png')] bg-center bg-cover rounded-xl">
+                  <div class="hero-overlay bg-opacity-5 bg-gradient-to-b from-gradient-start to-gradient-end rounded-xl"></div>
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle bg-[#121212] border-none text-white">❮</a> 
+                    <a href="#slide4" class="btn btn-circle bg-[#121212] border-none text-white">❯</a>
+                  </div>
+                </div> 
+                <div id="slide4" class="carousel-item relative w-full bg-[url('./images/banner4.png')] bg-center bg-cover rounded-xl">
+                  <div class="hero-overlay bg-opacity-5 bg-gradient-to-b from-gradient-start to-gradient-end rounded-xl"></div>
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle bg-[#121212] border-none text-white">❮</a> 
+                    <a href="#slide1" class="btn btn-circle bg-[#121212] border-none text-white">❯</a>
+                  </div>
+                </div>
+            </div>
+        </section>
+    </header>
+</body>
+</html>
